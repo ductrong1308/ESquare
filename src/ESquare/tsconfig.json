@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "system",
+        "moduleResolution": "node",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true
+
+
+        //"emitDecoratorMetadata": true,
+        //"experimentalDecorators": true,
+        //"module": "system",
+        //"moduleResolution": "node",
+        //"noImplicitAny": false,
+        //"noEmitOnError": true,
+        //"removeComments": false,
+        //"target": "es5",
+        //"sourceMap": true,
+        //"noLib": false,
+        //"declaration": false
+    },
+    "exclude": [ "node_modules", "wwwroot" ]
+}
