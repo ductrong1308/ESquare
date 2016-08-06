@@ -23,6 +23,7 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1, context_1) {
                 function AppComponent() {
                 }
                 AppComponent = __decorate([
+                    // load the full rxjs
                     core_1.Component({
                         selector: 'angularjs2demo',
                         template: '<h1>AngularJS 2 Demo</h1><div>Hello ASP.NET Core! Greetings from AngularJS 2.</div>'
@@ -35,3 +36,4 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1, context_1) {
         }
     }
 });
+//# sourceMappingURL=app.component.js.map

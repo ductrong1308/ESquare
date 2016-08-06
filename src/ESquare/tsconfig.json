@@ -3,26 +3,16 @@
         "target": "es5",
         "module": "system",
         "moduleResolution": "node",
-        "declaration": false,
-        "noImplicitAny": false,
-        "removeComments": true,
-        "noLib": false,
+        "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "sourceMap": true
-
-
-        //"emitDecoratorMetadata": true,
-        //"experimentalDecorators": true,
-        //"module": "system",
-        //"moduleResolution": "node",
-        //"noImplicitAny": false,
-        //"noEmitOnError": true,
-        //"removeComments": false,
-        //"target": "es5",
-        //"sourceMap": true,
-        //"noLib": false,
-        //"declaration": false
+        "removeComments": false,
+        "noImplicitAny": false,
+        "rootDir": "wwwroot/app",
+        "outDir": "wwwroot/app",
+        "listFiles": true,
+        "noLib": false,
+        "diagnostics": true
     },
-    "exclude": [ "node_modules", "wwwroot" ]
+    "exclude": [ "node_modules" ]
 }

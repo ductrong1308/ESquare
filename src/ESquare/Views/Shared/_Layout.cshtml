@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ESquare</title>
 
+    <!-- Css -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
     <!-- 1. Load libraries -->
     <!-- IE required polyfills -->
-    <script src="/js/es6-shim.min.js"></script>
-    <script src="/js/system-polyfills.js"></script>
+    <script src="/js/vendor/es6-shim.min.js"></script>
+    <script src="/js/vendor/system-polyfills.js"></script>
 
-    <!-- Angular2 libraries -->
-    <script src="/js/angular2-polyfills.js"></script>
-    <script src="/js/system.src.js"></script>
-    <script src="/js/Rx.js"></script>
-    <script src="~/js/angular2/angular2.dev.js"></script>
+    <!-- Vendors libraries -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    <script src="~/js/vendor/angular2/angular2-polyfills.js"></script>
+    <script src="~/js/vendor/system.src.js"></script>
+    <script src="~/js/vendor/Rx.js"></script>
+    <script src="~/js/vendor/angular2/angular2.dev.js"></script>
+    <script src="~/js/vendor/angular2/router.dev.js"></script>
+    <script src="~/js/vendor/angular2/http.dev.js"></script>
 
     <!-- Bootstrap via SystemJS -->
     <script>

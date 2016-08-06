@@ -23,7 +23,6 @@ var angularJs = [
 var js = [
     './node_modules/es6-shim/es6-shim.min.js',
     './node_modules/systemjs/dist/system-polyfills.js',
-    './node_modules/angular2/bundles/angular2-polyfills.js',
     './node_modules/systemjs/dist/system.src.js',
     './node_modules/bootstrap/dist/js/bootstrap.js',
     './node_modules/systemjs/dist/system.js',
@@ -40,26 +39,26 @@ var fonts = [
     './node_modules/bootstrap/dist/fonts/*.*'
 ];
 
-var tsProject = ts.createProject('tsconfig.json', {
-    typescript: require('typescript')
-});
+//var tsProject = ts.createProject('tsconfig.json', {
+//    typescript: require('typescript')
+//});
 
 gulp.task('copy-js', function () {
     _.forEach(js, function (file, _) {
         gulp.src(file)
-            .pipe(gulp.dest('./wwwroot/js'))
+            .pipe(gulp.dest('./wwwroot/js/vendor'))
     });
     _.forEach(angularJs, function (file, _) {
         gulp.src(file)
-            .pipe(gulp.dest('./wwwroot/js/angular2'))
+            .pipe(gulp.dest('./wwwroot/js/vendor/angular2'))
     });
 });
 
-gulp.task('copy-ts', function () {
-    return tsProject.src('Scripts/app/**/*.ts')
-        .pipe(ts(tsProject))
-        .pipe(gulp.dest('./wwwroot/app'));
-});
+//gulp.task('copy-ts', function () {
+//    return tsProject.src('Scripts/app/**/*.ts')
+//        .pipe(ts(tsProject))
+//        .pipe(gulp.dest('./wwwroot/app'));
+//});
 
 gulp.task('copy-min-js', function () {
     _.forEach(js, function (file, _) {
@@ -100,5 +99,5 @@ gulp.task('copy-min-css', function () {
     });
 });
 
-gulp.task('default', ['copy-js', 'copy-css', 'copy-ts']);
+gulp.task('default', ['copy-js', 'copy-css']);
 gulp.task('minify', ['copy-min-js', 'copy-min-css']);
