@@ -11,7 +11,8 @@ var _ = require('lodash'),
     ts = require('gulp-typescript'),
     uglify = require('gulp-uglify'),
     cssmin = require('gulp-cssmin'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    dtsGenerator = require('dts-generator');
 
 var angularJs = [
     './node_modules/angular2/bundles/angular2.dev.js',
@@ -24,11 +25,9 @@ var js = [
     './node_modules/es6-shim/es6-shim.min.js',
     './node_modules/systemjs/dist/system-polyfills.js',
     './node_modules/systemjs/dist/system.src.js',
-    './node_modules/bootstrap/dist/js/bootstrap.js',
     './node_modules/systemjs/dist/system.js',
     './node_modules/rxjs/bundles/Rx.js',
-    './node_modules/typescript/lib/typescript.js',
-    './node_modules/jquery/dist/jquery.js',
+    './node_modules/typescript/lib/typescript.js'
 ];
 
 var css = [
@@ -43,14 +42,16 @@ var fonts = [
 //    typescript: require('typescript')
 //});
 
+
+
 gulp.task('copy-js', function () {
     _.forEach(js, function (file, _) {
         gulp.src(file)
-            .pipe(gulp.dest('./wwwroot/js/vendor'))
+            .pipe(gulp.dest('./wwwroot/js'))
     });
     _.forEach(angularJs, function (file, _) {
         gulp.src(file)
-            .pipe(gulp.dest('./wwwroot/js/vendor/angular2'))
+            .pipe(gulp.dest('./wwwroot/js/angular2'))
     });
 });
 
@@ -99,5 +100,5 @@ gulp.task('copy-min-css', function () {
     });
 });
 
-gulp.task('default', ['copy-js', 'copy-css']);
+gulp.task('default', ['copy-js', 'copy-css', 'dts-gen']);
 gulp.task('minify', ['copy-min-js', 'copy-min-css']);

@@ -1,9 +1,11 @@
 ﻿import {Component} from 'angular2/core';
-import 'rxjs/Rx'; // load the full rxjs
+import {AsyncRoute, Router, RouteDefinition, RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
+
 
 @Component({
-    selector: 'angularjs2demo',
-    template: '<h1>AngularJS 2 Demo</h1><div>Hello ASP.NET Core! Greetings from AngularJS 2.</div>'
+    selector: 'angulardemo',
+    templateUrl: 'app/app.component.html',
+    directives: [ROUTER_DIRECTIVES]
 })
 
 export class AppComponent { }
